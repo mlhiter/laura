@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1 data-mark="name"></h1>
+    </div>
+    <script>
+      
+      // Handler that listens to data assignment operations
+      const handler = {
+        set(user, value, property) {
+          console.log(`${property} is being updated`)
+          const query = `[data-mark="${property}"]`
+          const elements = document.querySelectorAll(query)
+
+          for (const el of elements) {
+            el.innerText = value
+          }
+          return Reflect.set(user, value, property)
+        },
+      }
+
+      // Creating a proxy with the handler
+      const user = { name: 'Lin' }
+      const proxy = new Proxy(user, handler)
+    </script>
+  </body>
+</html>

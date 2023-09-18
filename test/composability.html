@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <template name="red-h1">
+      <h1 style="color: red">
+        <slot />
+      </h1>
+    </template>
+    <red-h1>This will render in red!</red-h1>
+  </body>
+  <script>
+    const template = document.getElementsByTagName('template')[0]
+    const componentName = template.getAttribute('name')
+    customElements.define(
+      componentName,
+      class extends HTMLElement {
+        constructor() {
+          super()
+          const component = template.content.children[0].cloneNode(true)
+          this.attachShadow({ mode: 'open' }).appendChild(component)
+        }
+      }
+    )
+  </script>
+</html>
