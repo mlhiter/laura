@@ -1,0 +1,27 @@
+{
+  "name": "laura",
+  "version": "1.0.0",
+  "description": "a micro javascript framework to build WebUI",
+  "main": "index.js",
+  "source": "index.html",
+  "scripts": {
+    "dev": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mlhiter/laura.git"
+  },
+  "keywords": [
+    "framework"
+  ],
+  "author": "Alex Lee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mlhiter/laura/issues"
+  },
+  "homepage": "https://github.com/mlhiter/laura#readme",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
+}
