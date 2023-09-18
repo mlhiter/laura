@@ -1,8 +1,7 @@
 import { init } from './framework'
-import { div } from './framework/element'
+import { User } from './src/user'
 
 const firstName = 'Marvin'
 const lastName = 'Frachet'
 
-init('#app', div`Hello ${firstName} ${lastName}`)
-// init("#app", p`Hello ${firstName} ${lastName}`); works as simply as moving div to p
+init('#app', User({ firstName, lastName }))

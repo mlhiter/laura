@@ -55,6 +55,10 @@ Vue中的template和React中的JSX的Component，用来展示的部分就是模�
 
 #### 4，虚拟DOM（virtual DOM）
 
+一种概念或者技术，简单的说就是我们虚构出一个DOM树存在内存里，当我们更新数据的时候，虚拟DOM树会检查自己哪里发生改变，然后仅改变真正DOM树的这一部分。
+
+为什么要在数据与真实DOM之间加上这样一层虚拟DOM呢？因为如果直接操控真实DOM经常会产生非常大的改变，损耗性能而且慢。而我们通过虚拟DOM可以做到仅改变我们想要改变的那一小部分的真实DOM，并且虚拟DOM存在内存里的代价是相对较小的（比直接操控真实DOM小）。
+
 ### #参考文章
 
 [Building a Frontend Framework; Reactivity and Composability With Zero Dependencies --- 构建前端框架；零依赖性的反应性和可组合性 (18alan.space)](https://18alan.space/posts/how-hard-is-it-to-build-a-frontend-framework.html)
