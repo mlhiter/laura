@@ -59,6 +59,10 @@ Vue中的template和React中的JSX的Component，用来展示的部分就是模�
 
 为什么要在数据与真实DOM之间加上这样一层虚拟DOM呢？因为如果直接操控真实DOM经常会产生非常大的改变，损耗性能而且慢。而我们通过虚拟DOM可以做到仅改变我们想要改变的那一小部分的真实DOM，并且虚拟DOM存在内存里的代价是相对较小的（比直接操控真实DOM小）。
 
+#### 5，状态管理（state management）
+
+状态是框架的本质，状态的改变会导致相应的组件使用状态的新值来重新渲染其模板。
+
 ### #参考文章
 
 [Building a Frontend Framework; Reactivity and Composability With Zero Dependencies --- 构建前端框架；零依赖性的反应性和可组合性 (18alan.space)](https://18alan.space/posts/how-hard-is-it-to-build-a-frontend-framework.html)
